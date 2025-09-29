@@ -3,18 +3,20 @@
 A simple warm-up script for data analysis.
 """
 
-def analyze_numbers(numbers):
-    """Return the mean and maximum of a list of numbers."""
-    if not numbers:
-        return None, None
-    mean_val = sum(numbers) / len(numbers)
-    max_val = max(numbers)
-    return mean_val, max_val
+# Libraries to be imported:
+import pandas as pd
+import matplotlib.pyplot as plt
 
+# Load data
+df = pd.read_csv("bp_Testdata.csv")
 
-if __name__ == "__main__":
-    data = [10, 20, 30, 40, 50]
-    mean, max_val = analyze_numbers(data)
-    print(f"Data: {data}")
-    print(f"Mean: {mean}")
-    print(f"Max: {max_val}")
+#print("Columns in DataFrame:", df.columns)
+#print(df.head())
+
+# Plot
+plt.plot(df["time_s"], df["pressure_mmHg"], marker="o", linestyle="-")
+plt.xlabel("Time [s]")
+plt.ylabel("Pressure [mmHg]")
+plt.title("Blood Pressure Over Time")
+plt.grid(True)
+plt.show()
