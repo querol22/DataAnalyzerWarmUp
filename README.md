@@ -11,3 +11,6 @@ A window frame has been added to detect the systolic and diastolic peaks.
 See Results ---> Results_01_SmoothData.png
 
 See Results ---> ExampleFigure_windowSize_5.png
+
+### Day 03: PDF-Results Generation".
+An automatic PDF will be now auto-generated. The example zoomed-region can be easily modified for further inspection.
