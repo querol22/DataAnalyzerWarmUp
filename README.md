@@ -1,16 +1,55 @@
-# DataAnalyzerWarmUp
+# 🧠 DataAnalyzerWarmUp
 
-### Day 01: Added Raw data.
-Raw Data includes a signal input pressure, namely CBF, to describe the Cerebral Blood Pressure, which under normal systolic-diastolic pressure values (oscillations of 70-90mmHg), an abrupt increase in pressure occurs at t=100s, and symmetrically at t=200s. 
+A compact physiological data analysis tool built in **Python** — part of a 4-week simulation warm-up series.  
+The tool loads experimental cerebral blood flow (CBF) data, smooths the signal, detects systolic/diastolic peaks, and automatically generates a professional **PDF report** with annotated plots.
 
-See Results ---> Results_00_RawData.png
+---
 
-### Day 02: Implemented Smooth Data.
-A window frame has been added to detect the systolic and diastolic peaks.
+## 📅 Weekly Progress Overview
 
-See Results ---> Results_01_SmoothData.png
+### **Week 1 – Data Setup**
+- Added raw CBF pressure data (`CBF.csv`).
+- Displays baseline cerebral blood pressure response with transient step increases at 100 s and 200 s.
+- **Result:** `Results_00_RawData.png`
 
-See Results ---> ExampleFigure_windowSize_5.png
+### **Week 2 – Signal Processing**
+- Implemented moving-average smoothing and systolic/diastolic peak detection.
+- Added CSV export of filtered data.
+- **Results:**  
+  - `Results_01_SmoothData.png`  
+  - `CBF_results.csv`
 
-### Day 03: PDF-Results Generation".
-An automatic PDF will be now auto-generated. The example zoomed-region can be easily modified for further inspection.
+### **Week 3 – Automated Reporting**
+- Integrated **ReportLab** for PDF generation.
+- Added **zoomed region (50 s–55 s)** visualization.
+- **Result:** `Physiological_Report.pdf`
+
+---
+
+## 🧰 Features
+
+- 🩸 Automatic signal smoothing and peak detection  
+- 📈 Matplotlib-based visualizations  
+- 📄 PDF report generation with embedded plots  
+- 💾 CSV export of processed signals  
+- ⚙️ Adjustable moving average window & zoom regions  
+
+---
+
+## 🧪 Usage
+
+```bash
+# Clone repository
+git clone https://github.com/querol22/DataAnalyzerWarmUp.git
+cd DataAnalyzerWarmUp
+
+# (Optional) Create virtual environment
+python -m venv venv
+source venv/bin/activate  # macOS/Linux
+venv\Scripts\activate     # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run analysis
+python src/analyzer.py
