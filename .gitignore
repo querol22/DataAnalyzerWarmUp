@@ -1,0 +1,26 @@
+# macOS system files
+.DS_Store
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Configuration and secrets
+SSH_keys/
+.env
+*.pem
+
+# Results and generated data
+Results/
+*.pdf
+*.csv
+*.png
+
+# Jupyter and temp
+*.ipynb_checkpoints/
+tmp/
