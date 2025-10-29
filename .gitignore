@@ -13,6 +13,7 @@ __pycache__/
 # Configuration and secrets
 SSH_keys/
 .env
+.pub
 *.pem
 
 # Results and generated data
